@@ -93,12 +93,12 @@ def Automate():
         print "Light intensity: %.2f lx" % Lux
         if Lux < seuilLuminositeMin:
             if etatLampe==0:
-                print("Luminosite suffisante: allumage lampe")
+                print("Luminosite insuffisante: allumage lampe")
                 monAmpoule.set_power("on")
                 etatLampe = 1
         elif Lux > seuilLuminositeMax:
             if etatLampe==1:
-                print("Luminosite insuffisante: extinction lampe")
+                print("Luminosite suffisante: extinction lampe")
                 monAmpoule.set_power("off")
                 etatLampe = 0
     else:
